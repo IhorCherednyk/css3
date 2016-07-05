@@ -1,0 +1,36 @@
+/* Для Трансформа
+	-webkit-moz-transform: ;
+	-moz-moz-transform: ;
+	-ms-moz-transform: ;
+	-o-moz-transform: ;
+	moz-transform: ;
+transform:translate(сдвиг елемента(x,y)),rotateX,rotateY(поворот(50deg)),scale(масштаб(0.5)),
+		   skew(наклон),matrix(матрица преобразования)
+transform-style:preserve-3d ;	   
+transform-origin: <x> <y> <z> - cмещение центровой точки*/
+ 
+/* Транзишон - анимации
+ -webkit-transition: ;
+ -o-transition: ;
+ transition: ;
+ transition-duration:
+  transition-delay:
+   transition-property:
+    transition-timing-function:*/
+#main {
+	text-align:center;
+}
+.box {
+ 	display:inline-block;
+ 	width:265px;
+ 	height:268px;
+ 	background: #555;
+  transition:1s;
+  z-index:51;
+ }
+
+.box:hover{
+  transform:scale(1.2,0.7);
+  z-index:101;
+  box-shadow: 0 0 10px #000000;
+ }

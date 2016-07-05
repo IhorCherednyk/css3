@@ -1,0 +1,82 @@
+/* Для Трансформа
+	-webkit-moz-transform: ;
+	-moz-moz-transform: ;
+	-ms-moz-transform: ;
+	-o-moz-transform: ;
+	moz-transform: ;
+transform:translate(сдвиг елемента(x,y)),rotateX,rotateY(поворот(50deg)),scale(масштаб(0.5)),
+		   skew(наклон),matrix(матрица преобразования)
+transform-style:preserve-3d ;	   
+transform-origin: <x> <y> <z> - cмещение центровой точки*/
+ 
+/* Транзишон - анимации
+ -webkit-transition: ;
+ -o-transition: ;
+ transition: ;
+ transition-duration:
+  transition-delay:
+   transition-property:
+    transition-timing-function:*/
+
+.box {
+ 	position:relative;
+ 	display:inline-block;
+ 	width:200px;
+ 	height:120px;
+  padding:10px 10px 10px 0px;
+ 	border:2px solid #ccc;
+ 	background: green;
+ 	overflow: hidden;
+ }
+ .box img {
+  position:absolute;
+  top:0;
+  left:0;
+  height:140px;
+  width:140px;
+  margin-right:20px;
+  border-radius:70px;
+  z-index:101;
+  transition:1s; /*Указует время смещения*/
+  transform:preserve-3d;
+ }
+ .box .otherside {
+  position:absolute;
+  top:0;
+  left:0;
+  height: 140px;
+  widows: 140px;
+  background: #5A9E61;
+  opacity:0;
+  border-radius:70px;
+
+  z-index:111;
+  transition:1s;
+  transform:preserve-3d;
+  transform:rotateY(180deg);
+
+ }
+.box .otherside a  {
+  	display:block;
+    text-align:center;
+    text-decoration:none;
+    color:#fff;
+    font-size: 24px;
+    margin-top: 44px;
+    z-index:6500;
+ }
+.box .otherside a:hover {
+    color:#ffc800;
+  }
+.box:hover {
+    background: #FFFEE8;
+    border-color:#5a9e61;
+  }
+.box:hover img {
+      transform:rotateY(180deg);
+      opacity:0;
+ }
+.box:hover .oterside {
+  transform:rotateY(0deg);
+  opacity:1;
+}

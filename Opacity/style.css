@@ -1,0 +1,53 @@
+/* Для Трансформа
+	-webkit-moz-transform: ;
+	-moz-moz-transform: ;
+	-ms-moz-transform: ;
+	-o-moz-transform: ;
+	moz-transform: ;
+transform:translate(сдвиг елемента(x,y)),rotateX,rotateY(поворот(50deg)),scale(масштаб(0.5)),
+		   skew(наклон),matrix(матрица преобразования)
+transform-style:preserve-3d ;	   
+transform-origin: <x> <y> <z> - cмещение центровой точки*/
+ 
+/* Транзишон - анимации
+ -webkit-transition: ;
+ -o-transition: ;
+ transition: ;
+ transition-duration:
+  transition-delay:
+   transition-property:
+    transition-timing-function:*/
+#main {
+	text-align:center;
+}
+.box {
+ 	position:relative;
+ 	display:inline-block;
+ 	width:265px;
+ 	height:268px;
+ 	border:1px solid green;
+ 	background: #555;
+ 	overflow: hidden;
+ }
+.box .text {
+  	position:absolute;
+  	top:40%;
+  	left:0;
+  	text-align:center;
+  	width:100%;
+  	font-size:35px;
+  	color:#fff;
+  	z-index:51;
+ }
+ .box img {
+ 	position:relative;
+ 	z-index:101;
+ 	transition:1s; /*Указует время смещения*/
+  transition-property: opasity;
+ }
+.box:hover img {
+ 	  opacity:0;
+ }
+ .box:hover .text {
+  z-index:200; /* Для того что бы ссылка стала активной*/
+ }

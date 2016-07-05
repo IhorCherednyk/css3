@@ -1,0 +1,23 @@
+body{background-color: #666;}
+.wrap {width:200px;display: inline-block;vertical-align: top;}
+.square {
+	display:block;
+	width:100px;
+	height:100px;
+	background-image: url(128.png);
+	-webkit-background-size: cover;
+	background-size: cover;
+	border-radius:5px;
+	margin: 50px;
+	vertical-align: top;
+}
+.spin {	animation:spin 1s ease-in-out 1s infinite;}
+@-moz-keyframes spin {
+	from {
+		transform:rotate(0deg);
+	}
+	to{
+		transform:rotate(360deg);
+	}
+}
+.bounce {animation:bounce 1s linear 1s infinite;}

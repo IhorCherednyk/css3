@@ -1,0 +1,93 @@
+/* Для Трансформа
+	-webkit-moz-transform: ;
+	-moz-moz-transform: ;
+	-ms-moz-transform: ;
+	-o-moz-transform: ;
+	moz-transform: ;
+transform:translate(сдвиг елемента(x,y)),rotateX,rotateY(поворот(50deg)),scale(масштаб(0.5)),
+		   skew(наклон),matrix(матрица преобразования)
+transform-style:preserve-3d ;	   
+transform-origin: <x> <y> <z> - cмещение центровой точки*/
+ 
+/* Транзишон - анимации
+ -webkit-transition: ;
+ -o-transition: ;
+ transition: ;
+ transition-duration:
+  transition-delay:
+   transition-property:
+    transition-timing-function:*/
+body {
+  background: #fff;
+}
+.container {
+  min-width:1300px;
+  margin: 0 auto;
+}
+#axis {
+  display: inline-block;
+  background-image: url(img/cef5b7493a0de9c52a254e26db4ef3ce.jpg);
+  width:600px;
+  height:550px;
+  position: relative;
+}
+.van {
+    top: 45%;
+    left: 44%;
+}
+#axis:hover .move-right{
+    transform: translate(200px,0);
+    -webkit-transform: translate(200px,0);
+    -o-transform: translate(200px,0);
+    -moz-transform: translate(200px,0);
+}
+#axis:hover .move-left{
+    transform: translate(-200px,0);
+    -webkit-transform: translate(-200px,0);
+    -o-transform: translate(-200px,0);
+    -moz-transform: translate(-200px,0);
+}
+#axis:hover .move-top{
+    transform: translate(0px,-200px);
+    -webkit-transform: translate(0px,-200px);
+    -o-transform: translate(0px,-200px);
+    -moz-transform: translate(0px,-200px);
+}
+#axis:hover .move-bot{
+    transform: translate(0px,200px) rotate(180deg);
+    -webkit-transform: translate(0px,200px) rotate(180deg);
+    -o-transform: translate(0px,200px) rotate(180deg);
+    -moz-transform: translate(0px,200px) rotate(180deg);
+}
+#axis:hover .move-ne{
+    transform: translate(-200px,-200px) rotate(-45deg);
+    -webkit-transform: translate(-200px,-200px) rotate(-45deg);
+    -o-transform: translate(-200px,-200px) rotate(-45deg);
+    -moz-transform: translate(-200px,-200px) rotate(-45deg);
+}
+#axis:hover .move-rotate360{
+    transform: rotate(360deg) scale(2);
+    -webkit-transform: rotate(360deg) scale(2);
+    -o-transform: rotate(360deg) scale(2);
+    -moz-transform: rotate(360deg) scale(2);
+}
+#axis:hover .move-larger{
+    transform: scale(2);
+    -webkit-transform: scale(2);
+    -o-transform: scale(2);
+    -moz-transform: scale(2);
+}
+#axis:hover .multi {
+    transform: translate(350px, -350px) rotate(360deg);
+    -webkit-transform: translate(350px, -350px) rotate(360deg);
+    -o-transform: translate(350px, -350px) rotate(360deg);
+    -moz-transform: translate(350px, -350px) rotate(360deg);
+}
+
+.object {
+    position: absolute;
+    transition: all 2s ease-in-out;
+    -webkit-transition: all 2s ease-in-out;
+    -moz-transition: all 2s ease-in-out;
+    -o-transition: all 2s ease-in-out;
+}

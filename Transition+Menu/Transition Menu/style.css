@@ -1,0 +1,110 @@
+/* Для Трансформа
+	-webkit-moz-transform: ;
+	-moz-moz-transform: ;
+	-ms-moz-transform: ;
+	-o-moz-transform: ;
+	moz-transform: ;
+transform:translate(сдвиг елемента(x,y)),rotateX,rotateY(поворот(50deg)),scale(масштаб(0.5)),
+		   skew(наклон),matrix(матрица преобразования)
+transform-style:preserve-3d ;	   
+transform-origin: <x> <y> <z> - cмещение центровой точки*/
+ 
+/* Транзишон - анимации
+ -webkit-transition: ;
+ -o-transition: ;
+ transition: ;
+ transition-duration:
+  transition-delay:
+   transition-property:
+    transition-timing-function:*/
+@font-face {
+    font-family: 'ChunkFive';
+    src: url('ChunkFive/chunkfive-webfont.eot');
+    src: url('ChunkFive/chunkfive-webfont.eot?#iefix') format('embedded-opentype'),
+         url('ChunkFive/chunkfive-webfont.woff2') format('woff2'),
+         url('ChunkFive/chunkfive-webfont.woff') format('woff'),
+         url('ChunkFive/chunkfive-webfont.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+
+}
+body {
+  font-size: 16px;
+  text-transform: uppercase;
+  color:#F1B144;
+}
+a {
+  text-decoration: none;
+  font-family: 'ChunkFive';
+    color:#F1B144;
+}
+.container h1 {
+    text-decoration: none;
+  font-family: 'ChunkFive';
+    color:#F1B144;
+    text-align: center;
+}
+.container {
+  overflow: hidden;
+  width:100%;
+  height:1000px;
+  margin:  0 auto;
+  background-image: url(img/90377Z37P18zdxddx2J4Lb69oLs2TLz.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+}
+.main {
+  width:1200px;
+  list-style:none;
+  padding: 0;
+  margin: 0 auto;
+}
+.main li {
+  width:24%;
+  height:150px;
+  display:block;
+  float:left;
+  overflow: hidden;
+  -webkit-transition: all .4s ease-in-out;
+  -o-transition: all .4s ease-in-out;
+  transition: all .4s ease-in-out;
+  
+}
+.main li:hover {
+  height:356px;
+}
+.main li:hover > a:nth-child(1) {
+   transform: translate(0px, 0px) rotate(360deg);
+   -webkit-transition: transform .5s ease-in-out;
+   -o-transition: transform .5s ease-in-out;
+   transition: transform .5s ease-in-out;
+}
+.main li > a:nth-child(1) {
+  display: block;
+  width:130px;
+  height:150px;
+  margin: 0 auto;
+  background-image: url(img/kaktus-.png);
+  background-repeat: no-repeat;
+  background-color: transparent;
+}
+.main li a.k2 {
+  background-position: 0 -145px;
+}
+.main li a.k3 {
+  background-position: 0 -300px;
+}
+.main li a.k4 {
+  background-position: 0 -450px;
+}
+.main li a {
+  display:block;
+  text-align: center;
+  height:50px;
+  line-height: 50px;
+  width:100%;
+  background-color: rgba(180,31,29,.5);
+  margin: 1px 0;
+  border-radius: 10px;
+}
+.main li {display: inline-block;}

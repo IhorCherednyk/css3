@@ -1,0 +1,82 @@
+
+/*Первый вариант
+.rate {
+	width:78px;
+	height:16px;
+	margin:10px 0 15px;
+	background: url(star.png) repeat-x;
+}
+
+.rate > div {
+	height:100%;
+	background: url(star1.png) repeat-x;
+}*/
+.clearfix:before,
+.clearfix:after {
+	content: " ";
+	display:table;
+}
+.clearfix:after {
+	clear:both;
+}
+.rating {
+	padding-left:0;
+	position:relative;
+	list-style:none;
+	margin:10px 0;
+	width:80px;
+	height:14px;
+	background: url(star.png);
+}
+.rating li {
+	float:left;
+	height:14px;
+}
+.rating li.current {
+	z-index:1;
+	background: url(star1.png);
+	width:40%;
+}
+.rating li span[class*="star"] {
+	position:absolute;
+	z-index:5;
+	display:block;
+	width:17px;
+	height:12px;
+	cursor:pointer;
+}
+.rating li span[class*="star"]:hover {
+	z-index:2;
+	left:0;
+	background: url(star1.png);
+}
+.rating li span.star1 {
+	left:0;
+}
+.rating li span.star1:hover {
+	width:17px;
+}
+.rating li span.star2 {
+	left:17px;
+}
+.rating li span.star2:hover {
+	width:34px;
+}
+.rating li span.star3 {
+	left:34px;
+}
+.rating li span.star3:hover {
+	width:51px;
+}
+.rating li span.star4 {
+	left:51px;
+}
+.rating li span.star4:hover {
+	width:67px;
+}
+.rating li span.star5 {
+	left:67px;
+}
+.rating li span.star5:hover {
+	width:84px;
+}
